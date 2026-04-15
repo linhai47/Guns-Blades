@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: c0f55c677b9ee21428da0d8d4da0350e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1574087272303023213
+    second: vampire_9_skill_2_effect_3_6_0
+  - first:
+      213: -4494018688937303888
+    second: vampire_9_skill_2_effect_3_6_1
+  - first:
+      213: -5700081923106117794
+    second: vampire_9_skill_2_effect_3_6_2
+  - first:
+      213: 4371266137508359760
+    second: vampire_9_skill_2_effect_3_6_3
+  - first:
+      213: 1567483520018623072
+    second: vampire_9_skill_2_effect_3_6_4
+  - first:
+      213: 5547743293324364417
+    second: vampire_9_skill_2_effect_3_6_5
+  - first:
+      213: -5510001562367878859
+    second: vampire_9_skill_2_effect_3_6_6
+  - first:
+      213: 2477746151788644324
+    second: vampire_9_skill_2_effect_3_6_7
+  - first:
+      213: -6597405125015365474
+    second: vampire_9_skill_2_effect_3_6_8
+  - first:
+      213: -5987938381178683729
+    second: vampire_9_skill_2_effect_3_6_9
+  - first:
+      213: -6279266274248193209
+    second: vampire_9_skill_2_effect_3_6_10
+  - first:
+      213: -3933684177429190967
+    second: vampire_9_skill_2_effect_3_6_11
+  - first:
+      213: -5877880054133856184
+    second: vampire_9_skill_2_effect_3_6_12
+  - first:
+      213: 7612395156160800132
+    second: vampire_9_skill_2_effect_3_6_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 99
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b2ae837f7b72ae0800000000000000
+      internalID: -1574087272303023213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 114
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0ecef00d902a1c0800000000000000
+      internalID: -4494018688937303888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 110
+        width: 20
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5762a6f0bd35e0b0800000000000000
+      internalID: -5700081923106117794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 119
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e21e0646bd9ac30800000000000000
+      internalID: 4371266137508359760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_4
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 111
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a2df1e4f1d0c510800000000000000
+      internalID: 1567483520018623072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 87
+        width: 68
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a87afc12b8dfc40800000000000000
+      internalID: 5547743293324364417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 71
+        width: 65
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5391733b5ca8883b0800000000000000
+      internalID: -5510001562367878859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 52
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e704f45ff8b26220800000000000000
+      internalID: 2477746151788644324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 34
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e981e1c4efe4174a0800000000000000
+      internalID: -6597405125015365474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_9
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faebaec84c196eca0800000000000000
+      internalID: -5987938381178683729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b8851b7909bd8a0800000000000000
+      internalID: -6279266274248193209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_11
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 4
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c622c9051fb869c0800000000000000
+      internalID: -3933684177429190967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_12
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 39
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8486ffcab339d6ea0800000000000000
+      internalID: -5877880054133856184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_9_skill_2_effect_3_6_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 37
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4856ed4ff09a4a960800000000000000
+      internalID: 7612395156160800132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vampire_9_skill_2_effect_3_6_0: -1574087272303023213
+      vampire_9_skill_2_effect_3_6_1: -4494018688937303888
+      vampire_9_skill_2_effect_3_6_10: -6279266274248193209
+      vampire_9_skill_2_effect_3_6_11: -3933684177429190967
+      vampire_9_skill_2_effect_3_6_12: -5877880054133856184
+      vampire_9_skill_2_effect_3_6_13: 7612395156160800132
+      vampire_9_skill_2_effect_3_6_2: -5700081923106117794
+      vampire_9_skill_2_effect_3_6_3: 4371266137508359760
+      vampire_9_skill_2_effect_3_6_4: 1567483520018623072
+      vampire_9_skill_2_effect_3_6_5: 5547743293324364417
+      vampire_9_skill_2_effect_3_6_6: -5510001562367878859
+      vampire_9_skill_2_effect_3_6_7: 2477746151788644324
+      vampire_9_skill_2_effect_3_6_8: -6597405125015365474
+      vampire_9_skill_2_effect_3_6_9: -5987938381178683729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

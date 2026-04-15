@@ -1,0 +1,186 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class SkillObject_Base : MonoBehaviour
+{
+    [SerializeField] protected GameObject onHitVfx;
+
+    [Header("Collision Detection")]
+    [SerializeField] protected float checkRadius = 1;
+    [SerializeField] protected LayerMask whatIsEnemy;
+    [SerializeField] protected Transform targetCheck;
+
+    [Header("Flying object ")] 
+    [SerializeField] protected float flyingSpeed = 15f;
+    [SerializeField] protected float flyingDistance = 20f;
+    protected Rigidbody2D rb;
+    protected Animator anim;
+    protected Entity_Stats playerStats;
+    protected DamageScaleData damageScaleData;
+    protected ElementType usedElement;
+    protected bool targetGotHit;
+    protected Transform lastTarget;
+
+    protected int facingDir;
+    protected Vector2 moveDirection;
+    protected Vector2 startPosition;
+
+    protected virtual void Awake()
+    {
+        
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+
+    protected virtual void start()
+    {
+    
+
+    }
+
+    public virtual void Setup(SkillBase skill , bool isFlying = true)
+    {
+        playerStats = skill.player.stats;
+        damageScaleData = skill.damageScaleData;
+        facingDir = skill.player.facingDir;
+
+        if(isFlying) SetDirection();
+    }
+
+    protected void Circle_AOE_Damage(float radius, Transform t)
+    {
+
+        foreach (var target in GetEnemiesInCircle(t,radius))
+        {
+            ApplyDamageToTarget(target);
+
+        }
+
+
+
+    }
+
+    protected void Single_Damage ( Transform t , float radius)
+    {
+        ApplyDamageToTarget( GetSingleEnemy(t,radius)); 
+
+
+    }
+
+    protected void ApplyDamageToTarget(Collider2D target , float damageScaleNumber = 1f )
+    {
+        IDamagable damagable = target.GetComponent<IDamagable>();
+
+        AttackData attackData = playerStats.GetAttackData(damageScaleData);
+
+        Entity_StatusHandler statusHandler = target.GetComponent<Entity_StatusHandler>();
+
+
+        float physicsDamage = attackData.physicalDamage *damageScaleNumber ;
+        float elementalDamage = attackData.elementalDamage * damageScaleNumber;
+        ElementType element = attackData.element;
+        Entity attackEntity = attackData.attackEntity;
+        bool isCrit = attackData.isCrit;
+        targetGotHit = damagable.TakeDamage(physicsDamage, elementalDamage, element, transform , isCrit);
+
+
+        if (element != ElementType.None)
+        {
+            statusHandler.ApplyStatusEffect(element, attackData.effectData, attackEntity);
+        }
+        if (targetGotHit)
+        {
+            lastTarget = target.transform;
+            Instantiate(onHitVfx, target.transform.position, Quaternion.identity);
+        }
+        usedElement = element;
+    }
+
+    protected Collider2D[] GetEnemiesInCircle(Transform t , float radius)
+    {
+        return  Physics2D.OverlapCircleAll(t.position, radius , whatIsEnemy);
+
+
+    }
+
+    protected Collider2D GetSingleEnemy (Transform t , float radius)
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(t.position, radius, whatIsEnemy);
+
+        Collider2D closest = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (var hit in hits)
+        {
+            float distance = Vector2.Distance(t.position, hit.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closest = hit;
+            }
+        }
+
+        return closest;
+
+
+
+    }
+
+
+
+   protected Transform FindClosestTarget(Transform t , float radius)
+    {
+        Transform target = null;
+
+        float closestDistance = Mathf.Infinity;
+
+        foreach (var enemy in GetEnemiesInCircle(t, radius))
+        {
+            float distance = Vector2.Distance(t.position, enemy.transform.position);
+
+            if (distance < closestDistance)
+            {
+                target = enemy.transform;
+                closestDistance = distance;
+            }
+        }
+
+        return target;
+
+    }
+
+    protected virtual void OnDrawGizmos()
+    {
+        if (targetCheck == null)
+        {
+            targetCheck = transform;
+        }
+        Gizmos.DrawWireSphere(targetCheck.position, checkRadius);
+    }
+
+
+    protected void SetDirection()
+    {
+ 
+        startPosition = transform.position;
+
+        moveDirection = new Vector2(facingDir, 0);
+
+        if (facingDir == -1)
+        {
+     
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        rb.linearVelocity = moveDirection * flyingSpeed;
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+}

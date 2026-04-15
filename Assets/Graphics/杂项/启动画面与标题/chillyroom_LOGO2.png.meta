@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: c1f15d8d11aac2247bd7fdad22813aea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8571739487095123266
+    second: chillyroom_LOGO2_0
+  - first:
+      213: -5286447308779267954
+    second: chillyroom_LOGO2_1
+  - first:
+      213: 574599467945505783
+    second: chillyroom_LOGO2_2
+  - first:
+      213: 3051428060613835530
+    second: chillyroom_LOGO2_3
+  - first:
+      213: 7819127609740880014
+    second: chillyroom_LOGO2_4
+  - first:
+      213: -3680087391648621829
+    second: chillyroom_LOGO2_5
+  - first:
+      213: -225344762350700093
+    second: chillyroom_LOGO2_6
+  - first:
+      213: 8863664737726701715
+    second: chillyroom_LOGO2_7
+  - first:
+      213: 8887051051093226921
+    second: chillyroom_LOGO2_8
+  - first:
+      213: -9193951562941993877
+    second: chillyroom_LOGO2_9
+  - first:
+      213: 6785041500162729698
+    second: chillyroom_LOGO2_10
+  - first:
+      213: -8352213250436660642
+    second: chillyroom_LOGO2_11
+  - first:
+      213: 2470871510606468880
+    second: chillyroom_LOGO2_12
+  - first:
+      213: -1248541033049962759
+    second: chillyroom_LOGO2_13
+  - first:
+      213: -6745291586713631087
+    second: chillyroom_LOGO2_14
+  - first:
+      213: -7967584116824623835
+    second: chillyroom_LOGO2_15
+  - first:
+      213: -8178387016487953121
+    second: chillyroom_LOGO2_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 942
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d6e7306afe4f670800000000000000
+      internalID: 8571739487095123266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 110
+        width: 14
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8854647e24c2a6b0800000000000000
+      internalID: -5286447308779267954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_2
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 110
+        width: 47
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f33507fb2369f700800000000000000
+      internalID: 574599467945505783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 61
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bfb8a67a9d85a20800000000000000
+      internalID: 3051428060613835530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 62
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88ed00322f138c60800000000000000
+      internalID: 7819127609740880014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 0
+        width: 116
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfad366e304bdecc0800000000000000
+      internalID: -3680087391648621829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_6
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 67
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c97710f12a6fdcf0800000000000000
+      internalID: -225344762350700093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_7
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 0
+        width: 39
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3902b540e10120b70800000000000000
+      internalID: 8863664737726701715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_8
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 50
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a57c2968d5255b70800000000000000
+      internalID: 8887051051093226921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_9
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 2
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ce1b0e3c5886080800000000000000
+      internalID: -9193951562941993877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_10
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 63
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6ab73bb4f492e50800000000000000
+      internalID: 6785041500162729698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_11
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 81
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e528967fc4af61c80800000000000000
+      internalID: -8352213250436660642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_12
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 36
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017d4533c8c4a4220800000000000000
+      internalID: 2470871510606468880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_13
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 9
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6ce85ab8a4caee0800000000000000
+      internalID: -1248541033049962759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196c08b3a09e362a0800000000000000
+      internalID: -6745291586713631087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_15
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 0
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525bf96b5747d6190800000000000000
+      internalID: -7967584116824623835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chillyroom_LOGO2_16
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d9196e658808e80800000000000000
+      internalID: -8178387016487953121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      chillyroom_LOGO2_0: 8571739487095123266
+      chillyroom_LOGO2_1: -5286447308779267954
+      chillyroom_LOGO2_10: 6785041500162729698
+      chillyroom_LOGO2_11: -8352213250436660642
+      chillyroom_LOGO2_12: 2470871510606468880
+      chillyroom_LOGO2_13: -1248541033049962759
+      chillyroom_LOGO2_14: -6745291586713631087
+      chillyroom_LOGO2_15: -7967584116824623835
+      chillyroom_LOGO2_16: -8178387016487953121
+      chillyroom_LOGO2_2: 574599467945505783
+      chillyroom_LOGO2_3: 3051428060613835530
+      chillyroom_LOGO2_4: 7819127609740880014
+      chillyroom_LOGO2_5: -3680087391648621829
+      chillyroom_LOGO2_6: -225344762350700093
+      chillyroom_LOGO2_7: 8863664737726701715
+      chillyroom_LOGO2_8: 8887051051093226921
+      chillyroom_LOGO2_9: -9193951562941993877
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
