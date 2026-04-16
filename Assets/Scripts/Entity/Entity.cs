@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    [Header("是否是本机操控角色")]
+    public bool isLocalPlayer = true;
+
     public event Action OnFlipped;
     public Entity_VFX vfx { get; private set; }
 
@@ -15,7 +18,7 @@ public class Entity : MonoBehaviour
 
     public Animator anim;
 
-    private bool facingRight = true;
+    public bool facingRight = true;
     public int facingDir = 1;
     private bool isKnocked;
     private Coroutine knockbackCo;
@@ -74,6 +77,10 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         HandleCollisionDetection();
         stateMachine.UpdateActiveState();
 
@@ -135,7 +142,7 @@ public class Entity : MonoBehaviour
 
         HandleFlip(targetX);
     }
-    public void HandleFlip(float xVelocity)
+    public virtual void HandleFlip(float xVelocity)
     {
         if (facingRight == true && xVelocity < 0)
         {

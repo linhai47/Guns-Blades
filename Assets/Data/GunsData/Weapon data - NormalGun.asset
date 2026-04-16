@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd27542cc8283a40aacaecd02bb6f2e, type: 3}
+  m_Name: Weapon data - NormalGun
+  m_EditorClassIdentifier: 
+  saveId: 18951680f19a74a41a9cb414d48fa5f7
+  itemPrice: 100
+  minStackSizeAtShop: 1
+  maxStackSizeAtShop: 1
+  itemRarity: 100
+  dropChance: 65
+  maxDropChance: 65
+  craftRecipe: []
+  itemName: Normal Gun
+  itemIcon: {fileID: -662078619788863456, guid: b6a61c5d55ddb38438eba189d6cdb856, type: 3}
+  itemType: 0
+  maxStackSize: 1
+  itemEffect: {fileID: 0}
+  modifiers: []
+  weaponPrefab: {fileID: 7312601809235402987, guid: 05b7f0ad3b3a6644384ebe4ff828545f, type: 3}
+  baseDamage: 10
+  baseAttackCooldown: 0.2
+  bulletSpeed: 25
+  damageScaleData:
+    physical: 1
+    elemental: 1
+    accDuration: 5
+    accMultiplier: 1
+    burnDuration: 3
+    burnDamageScale: 1
+    shockDuration: 3
+    shockDamageScale: 1
+    shockCharge: 0.4
+  hitboxRadius: 0
+  weaponElement: 0
