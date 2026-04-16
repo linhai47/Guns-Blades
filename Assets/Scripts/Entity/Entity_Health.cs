@@ -42,7 +42,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
         entity = GetComponent<Entity>();
         entityVfx = GetComponent<Entity_VFX>();
         entityStats = GetComponent<Entity_Stats>();
-        healthBar = GetComponentInChildren<Slider>();
+        //healthBar = GetComponentInChildren<Slider>();
         dropManager = GetComponent<Entity_DropManager>();
         SetupHealth();
     }
@@ -59,9 +59,9 @@ public class Entity_Health : MonoBehaviour, IDamagable
         {
 
             currentHealth = entityStats.GetMaxHealth();
-            OnHealthUpdate += UpdateHealthBar;
+            //OnHealthUpdate += UpdateHealthBar;
 
-            UpdateHealthBar();
+            //UpdateHealthBar();
             InvokeRepeating(nameof(RegenerateHealth), 0, regenInterval);
         }
     }
@@ -126,7 +126,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
             Debug.Log($"{gameObject.name} evaded the attack!");
             return false;
         }
-        HitStopController.Instance.StopTime(0.02f, 0.0f);
+        //HitStopController.Instance.StopTime(0.02f, 0.0f);
         Entity_Stats attackerStats = damageDealer.GetComponent<Entity_Stats>();
         float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0;
         float mitigation = entityStats != null ? entityStats.GetArmorMitigation(armorReduction) : 0;

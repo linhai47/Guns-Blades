@@ -79,4 +79,5 @@ public class Player_AnimationTriggers : Entity_AnimationTriggers
         skill_ShadowlessFist.LockOnTarget();
         animationOver = true;
     }
+
 }

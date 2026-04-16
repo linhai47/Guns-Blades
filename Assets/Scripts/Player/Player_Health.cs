@@ -14,15 +14,15 @@ public class Player_Health : Entity_Health
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-            Die();
+        //if (Input.GetKeyDown(KeyCode.N))
+        //    Die();
     }
 
 
     protected override void Die()
     {
         base.Die();
-        player.ui.OpenDeathScreenUI();
+        //player.ui.OpenDeathScreenUI();
         //GameManager.instance.SetLastPlayerPosition(transform.position);
 
         //GameManager.instance.RestartScene();

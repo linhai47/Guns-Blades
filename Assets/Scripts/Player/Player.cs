@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
+using System.Globalization;
 using PixelCrushers.DialogueSystem;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : Entity
 {
@@ -69,6 +71,11 @@ public class Player : Entity
     public float comboResetTime = 1;
     private Coroutine queuedAttackCo;
 
+    [Header("武器挂载")]
+    public Transform weaponHoldPoint;
+    public WeaponDataSO currentWeaponData;
+    public Weapon currentWeaponInstance;
+
    
     protected override void Awake()
     {
@@ -99,17 +106,112 @@ public class Player : Entity
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
         jumpAttackState = new Player_JumpAttackState(this, stateMachine, "jumpAttack");
         castingState = new Player_CastingState(this, stateMachine, "casting");
+
     }
 
+    private void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        obj.layer = newLayer;
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, newLayer);
+        }
+    }
+    public void OnPlayerSpawned(int playerID)
+    {
+        int targetLayer;
 
+        // 如果是房主（Player 1）
+        if (playerID == 1)
+        {
+            targetLayer = LayerMask.NameToLayer("Player1");
+        }
+        // 如果是客户端（Player 2）
+        else
+        {
+            targetLayer = LayerMask.NameToLayer("Player2");
+        }
+
+        // 把这个角色全身上下的皮都换成对应的 Layer
+        SetLayerRecursively(gameObject, targetLayer);
+    }
 
     protected override void Start()
     {
         base.Start();
         stateMachine.Initialize(idleState);
+        if (currentWeaponData != null) EquipWeapon(currentWeaponData);
+
+    }
+    public void EquipWeapon(WeaponDataSO newWeaponData)
+    {
+        currentWeaponData = newWeaponData;
+
+        // 1. 如果手上已经有枪了，先销毁旧的
+        if (currentWeaponInstance != null)
+        {
+            Destroy(currentWeaponInstance.gameObject);
+        }
+
+        // 2. 实例化新武器模型
+        GameObject weaponObj = Instantiate(newWeaponData.weaponPrefab, weaponHoldPoint);
+
+        // 3. 归零位置和旋转，让枪的把手正好对齐你的握枪点
+        weaponObj.transform.localPosition = Vector3.zero;
+        weaponObj.transform.localRotation = Quaternion.identity;
+
+        // 4. 获取武器脚本并初始化
+        currentWeaponInstance = weaponObj.GetComponent<Weapon>();
+        if (currentWeaponInstance != null)
+        {
+            // 把数据传给枪，这样枪才知道自己该射什么子弹、有多高伤害
+            currentWeaponInstance.SetupWeapon(newWeaponData, this);
+        }
     }
 
-    
+    private void AimTowardsMouse()
+    {
+        if (weaponHoldPoint == null || Mouse.current == null) return;
+
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        mousePosition.z = 0f;
+
+        // 计算鼠标相对于握枪点的方向向量
+        Vector3 aimDirection = mousePosition - weaponHoldPoint.position;
+
+        // 【核心魔法】：X轴方向乘上朝向系数
+        // 因为你的 Entity 翻转使用的是 Rotate(0,180,0)，当角色朝左时，
+        // 父物体的局部坐标系其实已经翻转了，这里通过 facingDir 同步调整计算逻辑
+        float localX = aimDirection.x * facingDir;
+        float localY = aimDirection.y;
+
+        // 算出相对角度，直接应用，不需要任何钳制！
+        float angle = Mathf.Atan2(localY, localX) * Mathf.Rad2Deg;
+        weaponHoldPoint.localRotation = Quaternion.Euler(0, 0, angle);
+    }
+    public override void HandleFlip(float xVelocity)
+    {
+        // 留空即可！什么都不写。
+    }
+    private void FlipCharacterTowardsMouse()
+    {
+        if (Mouse.current == null) return;
+
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+
+        // 如果鼠标在右边，但角色当前朝左，则翻转
+        if (mousePosition.x > transform.position.x && !facingRight)
+        {
+            Flip(); // 调用 Entity 基类现成的 Flip()，自动处理 Rotate(0,180,0) 和 事件派发
+        }
+        // 如果鼠标在左边，但角色当前朝右，则翻转
+        else if (mousePosition.x < transform.position.x && facingRight)
+        {
+            Flip(); // 同上
+        }
+    }
     protected override IEnumerator SpeedUpEntityCo(float duration, float accMultiplier)
     {
         Debug.Log("Speed up!" + accMultiplier);
@@ -213,11 +315,9 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    ui.isOpen = !ui.isOpen;
-        //    ui.OpenMerchantUI(ui.isOpen);
-        //}
+        if (!isLocalPlayer) return;
+        FlipCharacterTowardsMouse();
+        AimTowardsMouse();
     }
 
 

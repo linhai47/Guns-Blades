@@ -7,25 +7,28 @@ public class Player_BasicAttackState :PlayerState
 
     private int attackDir;
     private int comboIndex = 1;
-    private int comboLimit = 2;
-    private const int FirstComboIndex = 1;
-    private bool comboAttackQueued;
+    private int comboLimit = 1;
+    //private const int FirstComboIndex = 1;
+    //private bool comboAttackQueued;
+    private bool hasAttack =false;
 
     public Player_BasicAttackState(Player player, StateMachine stateMachine, string animBoolName) : base(player, stateMachine, animBoolName)
     {
-        if (comboLimit != player.attackVelocity.Length) comboLimit = player.attackVelocity.Length;
+        //if (comboLimit != player.attackVelocity.Length) comboLimit = player.attackVelocity.Length;
     }
 
 
     public override void Enter()
     {
         base.Enter();
-        ResetComboIndexIfNeeded();
-        SyncAttackSpeed();
-        comboAttackQueued = false;
+        //ResetComboIndexIfNeeded();
+        //SyncAttackSpeed();
+        //comboAttackQueued = false;
         attackDir = player.moveInput.x != 0 ?((int) player.moveInput.x) : player.facingDir;
-        anim.SetInteger("basicAttackIndex",comboIndex);
+        //anim.SetInteger("basicAttackIndex",comboIndex);
         ApplyAttackVelocity();
+        hasAttack = true;
+     
     }
 
     public override void Update()
@@ -40,7 +43,7 @@ public class Player_BasicAttackState :PlayerState
             QueueNextAttack();
         }
 
-        if (triggerCalled)
+        if (hasAttack)
         {
             HandleStateExit();
 
@@ -51,26 +54,26 @@ public class Player_BasicAttackState :PlayerState
     public override void Exit()
     {
         base.Exit();
-        comboIndex++;
+        //comboIndex++;
 
         lastTimeAttacked = Time.time;
     }
     private void HandleStateExit()
     {
-        if (comboAttackQueued)
-        {
-            anim.SetBool(animBoolName, false);
-            player.EnterAttackStateWithDelay();
-        }
-        else stateMachine.ChangeState(player.idleState);
+        //if (comboAttackQueued)
+        //{
+        //    anim.SetBool(animBoolName, false);
+        //    player.EnterAttackStateWithDelay();
+        //}
+         stateMachine.ChangeState(player.idleState);
     }
 
     private void QueueNextAttack()
     {
-        if (comboIndex < comboLimit)
-        {
-            comboAttackQueued = true;
-        }
+        //if (comboIndex < comboLimit)
+        //{
+        //    comboAttackQueued = true;
+        //}
     }
     private void HandleAttackVelocity()
     {
@@ -91,15 +94,15 @@ public class Player_BasicAttackState :PlayerState
     private void ResetComboIndexIfNeeded()
     {
 
-        if (Time.time > lastTimeAttacked + player.comboResetTime)
-        {
-            comboIndex = FirstComboIndex;
-        }
+        //if (Time.time > lastTimeAttacked + player.comboResetTime)
+        //{
+        //    comboIndex = FirstComboIndex;
+        //}
 
 
-        if (comboIndex > comboLimit)
-        {
-            comboIndex = FirstComboIndex;
-        }
+        //if (comboIndex > comboLimit)
+        //{
+        //    comboIndex = FirstComboIndex;
+        //}
     }
 }
